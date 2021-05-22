@@ -51,11 +51,12 @@ public class StepDefinitions {
           Thread.sleep(2000);
     }
 
-    @Then("^I see the amount that can be borrowed$")
-    public void i_see_the_amount_that_can_be_borrowed()  {
+    @Then("^I see the (.+) that can be borrowed$")
+    public void i_see_the_amount_that_can_be_borrowed(String amount)  {
     	log.info("LOG: amount that can be borrowed ");
     	String borrowAmount = homepage.verifyBorrowAmountCalculated();
-    	assertEquals(borrowAmount, "$507,000");
+    	log.info("LOG: Borrow amount expected = "+amount);
+    	assertEquals(borrowAmount, amount);
     }
     
   
@@ -67,9 +68,9 @@ public class StepDefinitions {
     
     @Then("^I select start over$")
     public void i_select_start_over() throws Exception  {
-    	Thread.sleep(1000);
+    	
     	homepage.selectStartOver();
-    	Thread.sleep(2000);
+    	
        
     }
 

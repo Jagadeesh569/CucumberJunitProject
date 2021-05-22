@@ -4,10 +4,10 @@ Feature: This feature will verify home loan calculator is working as expected
 Scenario Outline: verify calculator is processing customer data and calculates home loan amount one can borrow
 Given I am on the homeloan calculator page
 When I provide all the required input from data file <dataSet>
-Then I see the amount that can be borrowed
+Then I see the <amount> that can be borrowed
 Examples:
-| dataSet |
-| validData |
+| dataSet | amount |
+| validData | $507,000 |
 
 @smoke
 Scenario Outline: verify calculator is processing user data and displays a message
