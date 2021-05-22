@@ -1,0 +1,37 @@
+[
+	{
+	"loanInputData":{
+	    "dataSet":"validData",
+		"applicationType":"Single",
+		"noOfDependents":"0",
+		"propertyType":"HomeToLiveIn",
+		"income":"80000",
+		"otherIncome":"10000",
+		"livingExpenses":"500",
+		"homeLoanExpenses":"0",
+		"otherLoanExpenses":"100",
+		"otherCommitments":"0",
+		"totalCreditCardLimit":"10000"
+	
+	}
+	},
+	{
+	"loanInputData":{
+	    "dataSet":"invalidData",
+		"applicationType":"Single",
+		"noOfDependents":"0",
+		"propertyType":"HomeToLiveIn",
+		"income":"0",
+		"otherIncome":"0",
+		"livingExpenses":"1",
+		"homeLoanExpenses":"0",
+		"otherLoanExpenses":"0",
+		"otherCommitments":"0",
+		"totalCreditCardLimit":"0"
+	
+	}
+	
+	}
+	
+	
+]
