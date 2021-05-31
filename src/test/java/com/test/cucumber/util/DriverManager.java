@@ -25,8 +25,8 @@ public class DriverManager {
 		
 		if(driver == null) {
 			try {
-				
-				driver = HelperUtility.initializeWebDriver("Chrome");
+				HelperUtility util = new HelperUtility();
+				driver = util.initializeWebDriver("Chrome");
 			}catch(Exception ex) {}
 		}
 	}

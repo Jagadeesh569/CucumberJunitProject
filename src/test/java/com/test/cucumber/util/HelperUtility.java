@@ -20,7 +20,7 @@ import com.test.cucumber.stepDefinitions.StepDefinitions;
 
 public class HelperUtility {
 	
-	public static WebDriver driver;
+	public WebDriver driver;
 	Logger log = LoggerHelper.getLogger(HelperUtility.class);
 	private static final String chromeBrowser = "Chrome";
 	private static final String fireFoxBrowser = "Firefox";
@@ -30,7 +30,7 @@ public class HelperUtility {
 	
 	private static Properties props = new Properties(); 
 	
-	public static WebDriver initializeWebDriver(String browserType) {
+	public WebDriver initializeWebDriver(String browserType) {
 		System.out.println("BrowserType is = "+browserType);
 		
 		try {

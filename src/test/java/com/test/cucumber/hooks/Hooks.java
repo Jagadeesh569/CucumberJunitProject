@@ -29,7 +29,8 @@ public class Hooks {
 		String appURL = props.getProperty("ProdURL");
 		String browser = helper.getValueFrommvnProperties("browser");
 		log.info("LOG: got browser name from mvn command  ...."+browser);
-		manager.getInstance().setDriver(HelperUtility.initializeWebDriver(browser));
+		HelperUtility util = new HelperUtility();
+		manager.getInstance().setDriver(util.initializeWebDriver(browser));
 		driver=DriverManager.getInstance().getDriver();
 		log.info("LOG: got driver instance succesffully  ....");
 		driver.navigate().to(appURL);
